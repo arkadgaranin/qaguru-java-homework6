@@ -1,0 +1,46 @@
+plugins {
+    id 'java'
+    id "io.qameta.allure" version "2.9.4"
+}
+
+group 'com.gmail.arkgaranin'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+compileTestJava {
+    options.encoding = 'UTF-8'
+}
+
+allure {
+    version = "2.15.0"
+    autoconfigure = true
+
+    useJUnit5 {
+        version = "2.15.0"
+    }
+}
+
+ext {
+    junitVersion = '5.7.1'
+}
+
+sourceCompatibility = 1.9
+targetCompatibility = 1.9
+
+dependencies {
+    testImplementation(
+            "com.codeborne:selenide:5.25.0-selenium-4.0.0-rc-2",
+            "org.slf4j:slf4j-simple:2.0.0-alpha5",
+            "com.github.javafaker:javafaker:1.0.2",
+            "org.assertj:assertj-core:3.21.0",
+            "org.junit.jupiter:junit-jupiter-api:${junitVersion}")
+
+    testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:${junitVersion}")
+}
+
+test {
+    useJUnitPlatform()
+}
