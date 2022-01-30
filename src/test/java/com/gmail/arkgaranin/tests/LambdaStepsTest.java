@@ -19,7 +19,7 @@ import static io.qameta.allure.Allure.step;
 
 @Feature("Issue")
 @Owner("arkgaranin")
-public class LambdaStepsTest extends BaseTest {
+public class LambdaStepsTest extends TestBase {
 
     private final static String REPOSITORY = "allure-framework/allure2";
     private final static String ISSUE_NAME = "Allure report generated failure in azure pipeline";

@@ -9,7 +9,7 @@ import static com.codeborne.selenide.Selectors.*;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 
-public class SelenideListenerTest extends BaseTest {
+public class SelenideListenerTest extends TestBase {
 
     private final static String REPOSITORY = "allure-framework/allure2";
     private final static String ISSUE_NAME = "Allure report generated failure in azure pipeline";

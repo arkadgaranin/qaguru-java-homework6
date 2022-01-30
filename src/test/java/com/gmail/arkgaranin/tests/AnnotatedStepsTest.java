@@ -5,7 +5,7 @@ import com.gmail.arkgaranin.pages.MainPage;
 import com.gmail.arkgaranin.pages.ResultsPage;
 import org.junit.jupiter.api.Test;
 
-public class AnnotatedStepsTest extends BaseTest {
+public class AnnotatedStepsTest extends TestBase {
 
     private final static String REPOSITORY = "allure-framework/allure2";
     private final static String ISSUE_NAME = "Allure report generated failure in azure pipeline";
